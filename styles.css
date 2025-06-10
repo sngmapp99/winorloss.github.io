@@ -316,4 +316,98 @@ body {
     .modal-content h2 {
         font-size: 1.8rem;
     }
+}
+
+/* Policy pages specific styles */
+.policy-content {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #000000;
+    text-align: left;
+    position: relative;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.policy-content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+/* Back button at top left */
+.back-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(-3px);
+}
+
+/* Ensure white background for policy pages */
+body:has(.policy-content) {
+    background: #ffffff;
+}
+
+/* Termly embed styling - let it use default colors */
+div[name="termly-embed"],
+div[name="termly-embed"] *,
+div[name="termly-embed"] p,
+div[name="termly-embed"] h1,
+div[name="termly-embed"] h2,
+div[name="termly-embed"] h3,
+div[name="termly-embed"] h4,
+div[name="termly-embed"] h5,
+div[name="termly-embed"] h6,
+div[name="termly-embed"] span,
+div[name="termly-embed"] div,
+div[name="termly-embed"] li,
+div[name="termly-embed"] ul,
+div[name="termly-embed"] ol,
+div[name="termly-embed"] a {
+    color: #000000 !important;
+    background: transparent !important;
+}
+
+/* Even more specific rules for Termly content */
+.policy-content div[name="termly-embed"] * {
+    color: #000000 !important;
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.policy-content div[name="termly-embed"] p,
+.policy-content div[name="termly-embed"] span,
+.policy-content div[name="termly-embed"] div,
+.policy-content div[name="termly-embed"] h1,
+.policy-content div[name="termly-embed"] h2,
+.policy-content div[name="termly-embed"] h3,
+.policy-content div[name="termly-embed"] h4,
+.policy-content div[name="termly-embed"] h5,
+.policy-content div[name="termly-embed"] h6 {
+    color: #000000 !important;
+    background: none !important;
+}
+
+/* Force override any external styles */
+.policy-content * {
+    color: #000000 !important;
 } 
